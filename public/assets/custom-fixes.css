@@ -535,9 +535,41 @@ img:not(.elementor-icon img):not(.custom-logo):hover {
    8. HEADER RESPONSIF : Burger menu mobile
    ============================================================ */
 
-/* Par defaut : afficher desktop, cacher mobile */
-#ast-desktop-header { display: block; }
-#ast-mobile-header { display: none; }
+/* Header transparent : overlay au-dessus du hero (comme /projets) */
+.ast-theme-transparent-header #masthead {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: transparent;
+}
+.ast-theme-transparent-header #masthead .ast-main-header-wrap {
+  background: transparent;
+}
+.ast-theme-transparent-header { position: relative; }
+
+/* Liens de la navbar transparente : blancs */
+.ast-theme-transparent-header #ast-desktop-header .menu-link,
+.ast-theme-transparent-header #ast-desktop-header .ast-custom-button {
+  color: #ffffff !important;
+}
+.ast-theme-transparent-header #ast-desktop-header .menu-link:hover,
+.ast-theme-transparent-header #ast-desktop-header .current-menu-item .menu-link {
+  color: #EA559D !important;
+}
+/* Bouton Devis gratuit ! encadre */
+.ast-theme-transparent-header #ast-desktop-header .ast-custom-button {
+  border: 2px solid rgba(255,255,255,0.85);
+  padding: 10px 22px;
+  border-radius: 6px;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.ast-theme-transparent-header #ast-desktop-header .ast-custom-button:hover {
+  background: #ffffff;
+  color: #EA559D !important;
+  border-color: #ffffff;
+}
+/* Cache le doublon de lien menu-link a cote du custom-button (clone WP) */
+.ast-builder-button-wrap .ast-custom-button-link + .menu-link { display: none; }
 
 /* Breakpoint Astra : 921px */
 @media (max-width: 921px) {
