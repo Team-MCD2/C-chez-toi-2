@@ -659,9 +659,15 @@ img:not(.elementor-icon img):not(.custom-logo):hover {
     height: auto !important;
   }
 
-  /* Header transparent : sur mobile on garde lisible avec un fond sombre semi-transparent */
-  .ast-theme-transparent-header #ast-mobile-header .ast-main-header-wrap {
-    background: rgba(0, 4, 34, 0.55);
-    backdrop-filter: blur(6px);
+  /* Header transparent : pas de bandeau de fond sur mobile, on laisse le logo
+     et le burger flotter directement sur l'image du hero */
+  .ast-theme-transparent-header #ast-mobile-header,
+  .ast-theme-transparent-header #ast-mobile-header .ast-main-header-wrap,
+  .ast-theme-transparent-header #ast-mobile-header .ast-primary-header-bar,
+  .ast-theme-transparent-header #ast-mobile-header .main-header-bar-wrap {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
   }
 }
