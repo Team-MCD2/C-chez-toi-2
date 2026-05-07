@@ -554,25 +554,31 @@ img:not(.elementor-icon img):not(.custom-logo):hover {
   }
 
   /* Bouton burger : carre rose arrondi avec icone blanche */
-  .menu-toggle.main-header-menu-toggle {
+  body .menu-toggle.main-header-menu-toggle,
+  body .ast-mobile-menu-trigger-fill,
+  body .ast-mobile-menu-trigger-minimal,
+  body button.menu-toggle.main-header-menu-toggle.ast-mobile-menu-trigger-fill {
     background: #EA559D !important;
-    border: 0;
-    border-radius: 12px;
-    padding: 0;
-    cursor: pointer;
+    background-color: #EA559D !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    padding: 0 !important;
+    cursor: pointer !important;
     color: #ffffff !important;
     display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    box-shadow: 0 6px 16px -4px rgba(234, 85, 157, 0.55);
-    transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 52px !important;
+    height: 52px !important;
+    box-shadow: 0 6px 16px -4px rgba(234, 85, 157, 0.55) !important;
+    transition: background .2s ease, transform .2s ease, box-shadow .2s ease !important;
   }
-  .menu-toggle.main-header-menu-toggle:hover {
+  body .menu-toggle.main-header-menu-toggle:hover,
+  body .ast-mobile-menu-trigger-fill:hover {
     background: #c93d83 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 22px -6px rgba(234, 85, 157, 0.7);
+    background-color: #c93d83 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 22px -6px rgba(234, 85, 157, 0.7) !important;
   }
 
   /* L'icone reste blanche meme quand le header est transparent */
